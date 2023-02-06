@@ -17,26 +17,29 @@ class HomePage extends StatelessWidget {
       child: Scaffold(
         appBar: PreferredSize(
           preferredSize: Size(size.width, kToolbarHeight),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              IconButton(
-                icon: const Icon(Icons.menu),
-                onPressed: () {},
-              ),
-              const Spacer(),
-              Image.asset(
-                "assets/nba_logo.png",
-                fit: BoxFit.contain,
-              ),
-              const Icon(Icons.arrow_drop_down),
-              const Spacer(),
-              IconButton(
-                icon: const Icon(Icons.calculate),
-                onPressed: () {},
-              ),
-            ],
+          child: ColoredBox(
+            color: Colors.blue.shade900,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                IconButton(
+                  icon: const Icon(Icons.menu),
+                  onPressed: () {},
+                ),
+                const Spacer(),
+                Image.asset(
+                  "assets/nba_logo.png",
+                  fit: BoxFit.contain,
+                ),
+                const Icon(Icons.arrow_drop_down),
+                const Spacer(),
+                IconButton(
+                  icon: const Icon(Icons.calculate),
+                  onPressed: () {},
+                ),
+              ],
+            ),
           ),
         ),
         body: Column(
