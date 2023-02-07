@@ -9,6 +9,7 @@ class MatchList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      physics: NeverScrollableScrollPhysics(),
       padding: const EdgeInsets.all(10),
       itemCount: nbaData.length,
       itemBuilder: (context, index) {

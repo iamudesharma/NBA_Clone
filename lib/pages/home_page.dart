@@ -42,13 +42,17 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ),
-        body: Column(
-          children: [
-            CalendarTopWidget(size: size, start: start),
-            const Expanded(
-              child: MatchList(),
-            )
-          ],
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              CalendarTopWidget(size: size, start: start),
+              Container(
+                height: size.height,
+                width: size.width,
+                child: MatchList(),
+              )
+            ],
+          ),
         ),
       ),
     );
